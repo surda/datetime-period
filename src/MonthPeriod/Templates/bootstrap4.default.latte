@@ -1,0 +1,10 @@
+<div class="btn-group">
+    <a n:class="'btn', $monthPeriod->period() === $monthPeriodNow->period() ? 'btn-secondary' : 'btn-outline-secondary'" n:href="this, period => NULL">Tento měsíc</a>
+</div>
+<div class="btn-group ml-2">
+    <a class="btn btn-outline-secondary" n:href="this, period => $monthPeriod->periodPrevMonth()"><i class="fa fa-chevron-left"></i></a>
+    <a class="btn btn-outline-secondary" n:href="this, period => $monthPeriod->periodNextMonth()"><i class="fa fa-chevron-right"></i></a>
+</div>
+<div class="btn-group ml-2">
+    <h2 class="text-muted">{$monthPeriod->format('n / Y')}</h2>
+</div>
